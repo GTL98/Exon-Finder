@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>2770972_png.png</file>
+  </qresource>
+  <qresource prefix="icones">
+    <file>active-search-16.png</file>
+    <file>disk.png</file>
+  </qresource>
+</RCC>
