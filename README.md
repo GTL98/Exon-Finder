@@ -1,1 +1,1 @@
-# Exon-Finder
+# Exon Finder
