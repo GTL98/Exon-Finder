@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
+    <width>800</width>
     <height>240</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>780</width>
+    <width>800</width>
     <height>240</height>
    </size>
   </property>
@@ -53,17 +53,19 @@ border-style: inset;
 border-color: rgba(145, 207, 230, 255)
 }
 
-QPushButton#botao_escolher, #botao_salvar, #botao_pesquisar{
+QPushButton#botao_escolher, #botao_salvar, #botao_pesquisar, #botao_pasta{
 background-color: rgba(200, 200, 200, 100);
 border-radius: 10px;
 border-width: 2px;
 border-style: outset;
 border-color: rgba(145, 207, 230, 255)
 }
-QPushButton#botao_escolher:hover, #botao_salvar:hover, #botao_pesquisar:hover{
+QPushButton#botao_escolher:hover, #botao_salvar:hover, #botao_pesquisar:hover,
+#botao_pasta:hover{
 background-color: rgba(147, 207, 230, 100)
 }
-QPushButton#botao_escolher:pressed, #botao_salvar:pressed, #botao_pesquisar:pressed{
+QPushButton#botao_escolher:pressed, #botao_salvar:pressed, #botao_pesquisar:pressed,
+#botao_pasta:pressed{
 background-color: rgba(145, 207, 230, 150);
 border-width: 2px;
 border-style: inset;
@@ -73,7 +75,7 @@ border-color: rgba(145, 207, 230, 255)
   <widget class="QPushButton" name="botao_ajuda">
    <property name="geometry">
     <rect>
-     <x>745</x>
+     <x>760</x>
      <y>5</y>
      <width>31</width>
      <height>31</height>
@@ -112,7 +114,7 @@ border-color: rgba(145, 207, 230, 255)
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>665</x>
      <y>210</y>
      <width>123</width>
      <height>24</height>
@@ -133,7 +135,7 @@ border-color: rgba(145, 207, 230, 255)
   <widget class="QPushButton" name="botao_versao">
    <property name="geometry">
     <rect>
-     <x>645</x>
+     <x>660</x>
      <y>210</y>
      <width>131</width>
      <height>23</height>
@@ -208,12 +210,12 @@ Finder</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>182</x>
-     <y>22</y>
-     <width>558</width>
+     <x>190</x>
+     <y>20</y>
+     <width>605</width>
      <height>181</height>
     </rect>
    </property>
@@ -325,6 +327,32 @@ Finder</string>
           <family>Arial</family>
           <pointsize>12</pointsize>
          </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="botao_pasta">
+        <property name="minimumSize">
+         <size>
+          <width>41</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="doc_qrc.qrc">
+          <normaloff>:/icones/folder-horizontal-open.png</normaloff>:/icones/folder-horizontal-open.png</iconset>
         </property>
        </widget>
       </item>
