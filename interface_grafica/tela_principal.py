@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(780, 240)
+        Form.resize(800, 240)
         Form.setMinimumSize(QtCore.QSize(780, 240))
-        Form.setMaximumSize(QtCore.QSize(780, 240))
+        Form.setMaximumSize(QtCore.QSize(800, 240))
         Form.setStyleSheet("QLineEdit#linha_caminho, #linha_nome_arquivo, #linha_id_seq{\n"
 "border-radius: 10px;\n"
 "border-width: 2px;\n"
@@ -44,24 +44,26 @@ class Ui_Form(object):
 "border-color: rgba(145, 207, 230, 255)\n"
 "}\n"
 "\n"
-"QPushButton#botao_escolher, #botao_salvar, #botao_pesquisar{\n"
+"QPushButton#botao_escolher, #botao_salvar, #botao_pesquisar, #botao_pasta{\n"
 "background-color: rgba(200, 200, 200, 100);\n"
 "border-radius: 10px;\n"
 "border-width: 2px;\n"
 "border-style: outset;\n"
 "border-color: rgba(145, 207, 230, 255)\n"
 "}\n"
-"QPushButton#botao_escolher:hover, #botao_salvar:hover, #botao_pesquisar:hover{\n"
+"QPushButton#botao_escolher:hover, #botao_salvar:hover, #botao_pesquisar:hover,\n"
+"#botao_pasta:hover{\n"
 "background-color: rgba(147, 207, 230, 100)\n"
 "}\n"
-"QPushButton#botao_escolher:pressed, #botao_salvar:pressed, #botao_pesquisar:pressed{\n"
+"QPushButton#botao_escolher:pressed, #botao_salvar:pressed, #botao_pesquisar:pressed,\n"
+"#botao_pasta:pressed{\n"
 "background-color: rgba(145, 207, 230, 150);\n"
 "border-width: 2px;\n"
 "border-style: inset;\n"
 "border-color: rgba(145, 207, 230, 255)\n"
 "}")
         self.botao_ajuda = QtWidgets.QPushButton(Form)
-        self.botao_ajuda.setGeometry(QtCore.QRect(745, 5, 31, 31))
+        self.botao_ajuda.setGeometry(QtCore.QRect(760, 5, 31, 31))
         self.botao_ajuda.setMinimumSize(QtCore.QSize(31, 31))
         self.botao_ajuda.setMaximumSize(QtCore.QSize(31, 31))
         font = QtGui.QFont()
@@ -74,7 +76,7 @@ class Ui_Form(object):
         self.botao_ajuda.setStyleSheet("")
         self.botao_ajuda.setObjectName("botao_ajuda")
         self.label_5 = QtWidgets.QLabel(Form)
-        self.label_5.setGeometry(QtCore.QRect(650, 210, 123, 24))
+        self.label_5.setGeometry(QtCore.QRect(665, 210, 123, 24))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
@@ -83,7 +85,7 @@ class Ui_Form(object):
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.botao_versao = QtWidgets.QPushButton(Form)
-        self.botao_versao.setGeometry(QtCore.QRect(645, 210, 131, 23))
+        self.botao_versao.setGeometry(QtCore.QRect(660, 210, 131, 23))
         self.botao_versao.setMinimumSize(QtCore.QSize(131, 23))
         self.botao_versao.setMaximumSize(QtCore.QSize(131, 23))
         self.botao_versao.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -113,22 +115,22 @@ class Ui_Form(object):
         self.label.setScaledContents(False)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.widget = QtWidgets.QWidget(Form)
-        self.widget.setGeometry(QtCore.QRect(182, 22, 558, 181))
-        self.widget.setObjectName("widget")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget)
+        self.layoutWidget1 = QtWidgets.QWidget(Form)
+        self.layoutWidget1.setGeometry(QtCore.QRect(190, 20, 605, 181))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.layoutWidget1)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.label_6 = QtWidgets.QLabel(self.widget)
+        self.label_6 = QtWidgets.QLabel(self.layoutWidget1)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(19)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.horizontalLayout.addWidget(self.label_6)
-        self.linha_id_seq = QtWidgets.QLineEdit(self.widget)
+        self.linha_id_seq = QtWidgets.QLineEdit(self.layoutWidget1)
         self.linha_id_seq.setMinimumSize(QtCore.QSize(0, 31))
         self.linha_id_seq.setMaximumSize(QtCore.QSize(16777215, 31))
         font = QtGui.QFont()
@@ -137,7 +139,7 @@ class Ui_Form(object):
         self.linha_id_seq.setFont(font)
         self.linha_id_seq.setObjectName("linha_id_seq")
         self.horizontalLayout.addWidget(self.linha_id_seq)
-        self.botao_pesquisar = QtWidgets.QPushButton(self.widget)
+        self.botao_pesquisar = QtWidgets.QPushButton(self.layoutWidget1)
         self.botao_pesquisar.setMinimumSize(QtCore.QSize(121, 41))
         self.botao_pesquisar.setMaximumSize(QtCore.QSize(121, 41))
         font = QtGui.QFont()
@@ -153,7 +155,7 @@ class Ui_Form(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_3 = QtWidgets.QLabel(self.widget)
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget1)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(19)
@@ -162,7 +164,7 @@ class Ui_Form(object):
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_2.addWidget(self.label_3)
-        self.linha_caminho = QtWidgets.QLineEdit(self.widget)
+        self.linha_caminho = QtWidgets.QLineEdit(self.layoutWidget1)
         self.linha_caminho.setMinimumSize(QtCore.QSize(301, 31))
         self.linha_caminho.setMaximumSize(QtCore.QSize(301, 31))
         font = QtGui.QFont()
@@ -171,7 +173,17 @@ class Ui_Form(object):
         self.linha_caminho.setFont(font)
         self.linha_caminho.setObjectName("linha_caminho")
         self.horizontalLayout_2.addWidget(self.linha_caminho)
-        self.botao_salvar = QtWidgets.QPushButton(self.widget)
+        self.botao_pasta = QtWidgets.QPushButton(self.layoutWidget1)
+        self.botao_pasta.setMinimumSize(QtCore.QSize(41, 41))
+        self.botao_pasta.setMaximumSize(QtCore.QSize(41, 41))
+        self.botao_pasta.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.botao_pasta.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icones/folder-horizontal-open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.botao_pasta.setIcon(icon1)
+        self.botao_pasta.setObjectName("botao_pasta")
+        self.horizontalLayout_2.addWidget(self.botao_pasta)
+        self.botao_salvar = QtWidgets.QPushButton(self.layoutWidget1)
         self.botao_salvar.setMinimumSize(QtCore.QSize(121, 41))
         self.botao_salvar.setMaximumSize(QtCore.QSize(121, 41))
         font = QtGui.QFont()
@@ -181,9 +193,9 @@ class Ui_Form(object):
         font.setWeight(50)
         self.botao_salvar.setFont(font)
         self.botao_salvar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icones/disk.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.botao_salvar.setIcon(icon1)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icones/disk.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.botao_salvar.setIcon(icon2)
         self.botao_salvar.setObjectName("botao_salvar")
         self.horizontalLayout_2.addWidget(self.botao_salvar)
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
