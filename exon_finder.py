@@ -40,7 +40,7 @@ class ExonFinder(QWidget, tela_principal.Ui_Form):
     def funcao_pesquisar(self):
         inicio_exon = []
         final_exon = []
-        Entrez.email = 'teste@exemplo.com'
+        Entrez.email = 'teste@example.com'
         id_seq = self.linha_id_seq.text().upper().strip()
         if id_seq == '':
             QMessageBox.warning(
